@@ -98,12 +98,19 @@ function collatz(n){
 //
 // The .bark() method of a dog should return the string 'Woof!'.
 // The contructor you made (it is preloaded) looks like this:
-// function Dog(name, breed, sex, age){
-//     this.name  = name;
-//     this.breed = breed;
-//     this.sex   = sex;
-//     this.age   = age;
-// }
-
+function Dog(name, breed, sex, age){
+    this.name  = name;
+    this.breed = breed;
+    this.sex   = sex;
+    this.age   = age;
+}
 // Answer - YES
 Dog.prototype.bark = function(){return'Woof!'}
+
+// Question 6: original
+// Check to see if a string has the same amount of 'x's and 'o's.
+// The method must return a boolean and be case insensitive. The string can contains any char.
+//
+// ANSWER: YES
+
+function XO(str) { return ((str.match(/o/ig) || []).length == (str.match(/x/gi) || []).length)};
