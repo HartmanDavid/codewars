@@ -114,3 +114,23 @@ Dog.prototype.bark = function(){return'Woof!'}
 // ANSWER: YES
 
 function XO(str) { return ((str.match(/o/ig) || []).length == (str.match(/x/gi) || []).length)};
+
+//Question 7: original
+// Write a small function that returns the values of an array that are not odd.
+//
+// All values in the array will be integers. Return the good values in the order they are given.
+//
+// Answer - Yes
+
+function noOdds( values ){
+  arr = values.filter(function(n){
+    if(n == 0 ){
+      return true;
+    } else if( n % 2 === 0){
+      return true;
+    }
+  })
+  console.log(arr);
+  return arr
+}
+noOdds([0,1,2,3,4,5,6])
